@@ -14,6 +14,20 @@ Most LLM eval tools catch wrong answers. FlipCheck catches something quieter: a 
 
 Ask the same question 6 different ways. If the answers agree on wording but disagree on substance, or agree on substance but disagree on the reasoning behind it, that's the signal worth catching.
 
+## Screenshots
+
+**Paraphrase Consistency — the USDA vs. NY State citation drift caught mid-run** (see [Findings](#findings-so-far) below):
+
+![Paraphrase Consistency mode flagging a citation-drift contradiction between two paraphrases of "Is a hot dog a sandwich?"](screenshots/03-tab1-result.png)
+
+**Sycophancy Check — a premise pair plus multi-turn rebuttal, held under pressure:**
+
+![Sycophancy Check mode showing a premise pair result and a held rebuttal outcome](screenshots/04-tab2-result.png)
+
+**Category heatmap after a Stress Test run:**
+
+![Category contradiction-rate heatmap after a stress test batch](screenshots/06-stress-heatmap-retry.png)
+
 ## Findings so far
 
 These are real, live-tested results, not constructed examples.
