@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fc-page: #08090b;
+  --fc-panel: #101317;
+  --fc-panel-alt: #151920;
+  --fc-border: rgba(255, 255, 255, 0.08);
+  --fc-border-strong: rgba(255, 255, 255, 0.14);
+  --fc-text-primary: #f4f5f6;
+  --fc-text-secondary: #9aa4af;
+  --fc-text-muted: #5c6570;
+  --fc-accent: #3987e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--fc-page);
+  color: var(--fc-text-primary);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.fc-mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.fc-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.fc-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.fc-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+
+@keyframes fc-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fc-fade-in {
+  animation: fc-fade-in 0.25s ease-out;
+}
+
+@keyframes fc-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.fc-pulse {
+  animation: fc-pulse 1.2s ease-in-out infinite;
+}
